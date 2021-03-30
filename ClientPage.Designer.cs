@@ -31,6 +31,9 @@ namespace Car_Rental_Application
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientPage));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,8 +53,11 @@ namespace Car_Rental_Application
             this.txt_address = new System.Windows.Forms.TextBox();
             this.txt_phone = new System.Windows.Forms.TextBox();
             this.txt_email = new System.Windows.Forms.TextBox();
-            this.btn_add_client = new System.Windows.Forms.Button();
+            this.btn_addclient = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_showclients = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,7 +84,7 @@ namespace Car_Rental_Application
             this.button3.Location = new System.Drawing.Point(911, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(294, 72);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -104,7 +110,7 @@ namespace Car_Rental_Application
             this.button1.Location = new System.Drawing.Point(331, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(294, 72);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -116,7 +122,7 @@ namespace Car_Rental_Application
             this.label1.Location = new System.Drawing.Point(21, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 29);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 5;
             this.label1.Text = "Client Manager";
             // 
             // Btn_Exit
@@ -129,7 +135,7 @@ namespace Car_Rental_Application
             this.Btn_Exit.Location = new System.Drawing.Point(1652, 0);
             this.Btn_Exit.Name = "Btn_Exit";
             this.Btn_Exit.Size = new System.Drawing.Size(88, 72);
-            this.Btn_Exit.TabIndex = 1;
+            this.Btn_Exit.TabIndex = 6;
             this.Btn_Exit.UseVisualStyleBackColor = false;
             this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click_1);
             // 
@@ -147,7 +153,7 @@ namespace Car_Rental_Application
             this.label2.Location = new System.Drawing.Point(21, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 29);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 7;
             this.label2.Text = "SSN";
             // 
             // label3
@@ -159,7 +165,7 @@ namespace Car_Rental_Application
             this.label3.Location = new System.Drawing.Point(21, 248);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 29);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 8;
             this.label3.Text = "Name";
             // 
             // label4
@@ -171,7 +177,7 @@ namespace Car_Rental_Application
             this.label4.Location = new System.Drawing.Point(21, 331);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 29);
-            this.label4.TabIndex = 4;
+            this.label4.TabIndex = 9;
             this.label4.Text = "Age";
             // 
             // label5
@@ -183,7 +189,7 @@ namespace Car_Rental_Application
             this.label5.Location = new System.Drawing.Point(21, 414);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 29);
-            this.label5.TabIndex = 5;
+            this.label5.TabIndex = 10;
             this.label5.Text = "Address";
             // 
             // label6
@@ -195,7 +201,7 @@ namespace Car_Rental_Application
             this.label6.Location = new System.Drawing.Point(21, 497);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 29);
-            this.label6.TabIndex = 6;
+            this.label6.TabIndex = 11;
             this.label6.Text = "Phone";
             // 
             // label7
@@ -207,7 +213,7 @@ namespace Car_Rental_Application
             this.label7.Location = new System.Drawing.Point(21, 580);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 29);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 12;
             this.label7.Text = "Email";
             // 
             // txt_ssn
@@ -215,7 +221,7 @@ namespace Car_Rental_Application
             this.txt_ssn.Location = new System.Drawing.Point(139, 165);
             this.txt_ssn.Name = "txt_ssn";
             this.txt_ssn.Size = new System.Drawing.Size(177, 27);
-            this.txt_ssn.TabIndex = 7;
+            this.txt_ssn.TabIndex = 13;
             this.txt_ssn.TextChanged += new System.EventHandler(this.txt_ssn_TextChanged);
             // 
             // txt_name
@@ -223,14 +229,15 @@ namespace Car_Rental_Application
             this.txt_name.Location = new System.Drawing.Point(139, 252);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(177, 27);
-            this.txt_name.TabIndex = 7;
+            this.txt_name.TabIndex = 14;
+            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
             // txt_age
             // 
             this.txt_age.Location = new System.Drawing.Point(139, 331);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(177, 27);
-            this.txt_age.TabIndex = 7;
+            this.txt_age.TabIndex = 15;
             this.txt_age.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txt_address
@@ -238,36 +245,91 @@ namespace Car_Rental_Application
             this.txt_address.Location = new System.Drawing.Point(139, 414);
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(177, 27);
-            this.txt_address.TabIndex = 7;
+            this.txt_address.TabIndex = 16;
+            this.txt_address.TextChanged += new System.EventHandler(this.txt_address_TextChanged);
             // 
             // txt_phone
             // 
             this.txt_phone.Location = new System.Drawing.Point(139, 501);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(177, 27);
-            this.txt_phone.TabIndex = 8;
+            this.txt_phone.TabIndex = 17;
+            this.txt_phone.TextChanged += new System.EventHandler(this.txt_phone_TextChanged);
             // 
             // txt_email
             // 
             this.txt_email.Location = new System.Drawing.Point(139, 584);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(177, 27);
-            this.txt_email.TabIndex = 9;
+            this.txt_email.TabIndex = 18;
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
-            // btn_add_client
+            // btn_addclient
             // 
-            this.btn_add_client.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add_client.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add_client.BackgroundImage")));
-            this.btn_add_client.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_add_client.FlatAppearance.BorderSize = 0;
-            this.btn_add_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add_client.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_add_client.Location = new System.Drawing.Point(156, 644);
-            this.btn_add_client.Name = "btn_add_client";
-            this.btn_add_client.Size = new System.Drawing.Size(130, 65);
-            this.btn_add_client.TabIndex = 10;
-            this.btn_add_client.UseVisualStyleBackColor = false;
-            this.btn_add_client.Click += new System.EventHandler(this.button4_Click);
+            this.btn_addclient.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addclient.FlatAppearance.BorderSize = 0;
+            this.btn_addclient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_addclient.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_addclient.Image = ((System.Drawing.Image)(resources.GetObject("btn_addclient.Image")));
+            this.btn_addclient.Location = new System.Drawing.Point(164, 685);
+            this.btn_addclient.Name = "btn_addclient";
+            this.btn_addclient.Size = new System.Drawing.Size(118, 61);
+            this.btn_addclient.TabIndex = 19;
+            this.btn_addclient.UseVisualStyleBackColor = false;
+            this.btn_addclient.Click += new System.EventHandler(this.btn_addclient_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
+            this.dataGridView1.Location = new System.Drawing.Point(691, 134);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Size = new System.Drawing.Size(899, 512);
+            this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btn_showclients
+            // 
+            this.btn_showclients.BackColor = System.Drawing.Color.Transparent;
+            this.btn_showclients.FlatAppearance.BorderSize = 0;
+            this.btn_showclients.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_showclients.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_showclients.ForeColor = System.Drawing.Color.White;
+            this.btn_showclients.Location = new System.Drawing.Point(1025, 685);
+            this.btn_showclients.Name = "btn_showclients";
+            this.btn_showclients.Size = new System.Drawing.Size(180, 61);
+            this.btn_showclients.TabIndex = 21;
+            this.btn_showclients.Text = "Preview Clients";
+            this.btn_showclients.UseVisualStyleBackColor = false;
+            this.btn_showclients.Click += new System.EventHandler(this.btn_showclients_Click);
             // 
             // ClientPage
             // 
@@ -276,7 +338,10 @@ namespace Car_Rental_Application
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1740, 870);
-            this.Controls.Add(this.btn_add_client);
+            this.ControlBox = false;
+            this.Controls.Add(this.btn_showclients);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_addclient);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.txt_phone);
             this.Controls.Add(this.txt_address);
@@ -298,6 +363,7 @@ namespace Car_Rental_Application
             this.Load += new System.EventHandler(this.ClientPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,6 +390,8 @@ namespace Car_Rental_Application
         private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.TextBox txt_phone;
         private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.Button btn_add_client;
+        private System.Windows.Forms.Button btn_addclient;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_showclients;
     }
 }

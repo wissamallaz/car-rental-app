@@ -56,17 +56,18 @@ namespace Car_Rental_Application
 
         }
 
-        private void btn_add_client(object sender, EventArgs e)
+   
+        private void btn_addclient_Click(object sender, EventArgs e)
         {
             try
             {
-                string query = "INSERT INTO Client VALUES (@CName, @SSN, @Age, @Phone, @Adress, @Email)";
+                string query = "INSERT INTO Client VALUES (@SSN, @CName, @Age, @Adress, @Phone, @Email)";
                 SqlCommand com = new SqlCommand(query, con);
-                com.Parameters.AddWithValue("@SSN", int.Parse(txt_ssn.Text));
+                com.Parameters.AddWithValue("@SSN", Int32.Parse(txt_ssn.Text));
                 com.Parameters.AddWithValue("@CName", txt_name.Text);
-                com.Parameters.AddWithValue("@Age", int.Parse(txt_age.Text));
-                com.Parameters.AddWithValue("@Adress", txt_address);
-                com.Parameters.AddWithValue("@Phone", int.Parse(txt_phone.Text));
+                com.Parameters.AddWithValue("@Age", Int32.Parse(txt_age.Text));
+                com.Parameters.AddWithValue("@Adress", txt_address.Text);
+                com.Parameters.AddWithValue("@Phone", Int32.Parse(txt_phone.Text));
                 com.Parameters.AddWithValue("@Email", txt_email.Text);
 
 
@@ -91,6 +92,40 @@ namespace Car_Rental_Application
         private void txt_ssn_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_address_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_phone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_showclients_Click(object sender, EventArgs e)
+        {
+            string query = "Select * from Client";
+            DataTable td = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            adapter.Fill(td);
+            dataGridView1.DataSource = td;
         }
     }
 }
