@@ -56,6 +56,7 @@ namespace Car_Rental_Application
             this.btn_addclient = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_showclients = new System.Windows.Forms.Button();
+            this.btn_searchclients = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +87,7 @@ namespace Car_Rental_Application
             this.button3.Size = new System.Drawing.Size(294, 72);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -268,10 +270,10 @@ namespace Car_Rental_Application
             // 
             this.btn_addclient.BackColor = System.Drawing.Color.Transparent;
             this.btn_addclient.FlatAppearance.BorderSize = 0;
-            this.btn_addclient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_addclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addclient.ForeColor = System.Drawing.Color.Transparent;
             this.btn_addclient.Image = ((System.Drawing.Image)(resources.GetObject("btn_addclient.Image")));
-            this.btn_addclient.Location = new System.Drawing.Point(164, 685);
+            this.btn_addclient.Location = new System.Drawing.Point(167, 708);
             this.btn_addclient.Name = "btn_addclient";
             this.btn_addclient.Size = new System.Drawing.Size(118, 61);
             this.btn_addclient.TabIndex = 19;
@@ -294,7 +296,7 @@ namespace Car_Rental_Application
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(691, 134);
+            this.dataGridView1.Location = new System.Drawing.Point(829, 206);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -320,16 +322,31 @@ namespace Car_Rental_Application
             // 
             this.btn_showclients.BackColor = System.Drawing.Color.Transparent;
             this.btn_showclients.FlatAppearance.BorderSize = 0;
-            this.btn_showclients.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_showclients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_showclients.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_showclients.ForeColor = System.Drawing.Color.White;
-            this.btn_showclients.Location = new System.Drawing.Point(1025, 685);
+            this.btn_showclients.Location = new System.Drawing.Point(1163, 724);
             this.btn_showclients.Name = "btn_showclients";
             this.btn_showclients.Size = new System.Drawing.Size(180, 61);
             this.btn_showclients.TabIndex = 21;
             this.btn_showclients.Text = "Preview Clients";
             this.btn_showclients.UseVisualStyleBackColor = false;
             this.btn_showclients.Click += new System.EventHandler(this.btn_showclients_Click);
+            // 
+            // btn_searchclients
+            // 
+            this.btn_searchclients.BackColor = System.Drawing.Color.Transparent;
+            this.btn_searchclients.FlatAppearance.BorderSize = 0;
+            this.btn_searchclients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_searchclients.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_searchclients.ForeColor = System.Drawing.Color.White;
+            this.btn_searchclients.Location = new System.Drawing.Point(1176, 142);
+            this.btn_searchclients.Name = "btn_searchclients";
+            this.btn_searchclients.Size = new System.Drawing.Size(167, 50);
+            this.btn_searchclients.TabIndex = 22;
+            this.btn_searchclients.Text = "Search Clients";
+            this.btn_searchclients.UseVisualStyleBackColor = false;
+            this.btn_searchclients.Click += new System.EventHandler(this.btn_searchclients_Click);
             // 
             // ClientPage
             // 
@@ -339,6 +356,7 @@ namespace Car_Rental_Application
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1740, 870);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_searchclients);
             this.Controls.Add(this.btn_showclients);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_addclient);
@@ -393,5 +411,6 @@ namespace Car_Rental_Application
         private System.Windows.Forms.Button btn_addclient;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_showclients;
+        private System.Windows.Forms.Button btn_searchclients;
     }
 }

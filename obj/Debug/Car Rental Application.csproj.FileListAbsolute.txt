@@ -11,3 +11,6 @@ C:\Users\wissa\source\repos\Car Rental Application\bin\Debug\Car Rental Applicat
 C:\Users\wissa\source\repos\Car Rental Application\bin\Debug\Car Rental Application.pdb
 C:\Users\wissa\source\repos\Car Rental Application\obj\Debug\Car Rental Application.csprojAssemblyReference.cache
 C:\Users\wissa\source\repos\Car Rental Application\obj\Debug\Car_Rental_Application.ClientPage.resources
+C:\Users\wissa\source\repos\Car Rental Application\obj\Debug\Car_Rental_Application.SearchClient.resources
+C:\Users\wissa\source\repos\Car Rental Application\obj\Debug\Car_Rental_Application.EmployeePage.resources
+C:\Users\wissa\source\repos\Car Rental Application\obj\Debug\Car_Rental_Application.SearchEmployee.resources

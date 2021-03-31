@@ -19,7 +19,7 @@ namespace Car_Rental_Application
             InitializeComponent();
         }
 
-        
+
         private void Btn_Exit_Click_1(object sender, EventArgs e)
         {
             timer1.Start();
@@ -56,7 +56,7 @@ namespace Car_Rental_Application
 
         }
 
-   
+
         private void btn_addclient_Click(object sender, EventArgs e)
         {
             try
@@ -127,5 +127,20 @@ namespace Car_Rental_Application
             adapter.Fill(td);
             dataGridView1.DataSource = td;
         }
+
+        private void btn_searchclients_Click(object sender, EventArgs e)
+        {
+            SearchClient load = new SearchClient();
+            load.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EmployeePage load = new EmployeePage();
+            load.Show();
+            Hide();
+        }
     }
 }
+        

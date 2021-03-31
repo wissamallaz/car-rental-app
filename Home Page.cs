@@ -31,7 +31,9 @@ namespace Car_Rental_Application
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            EmployeePage load = new EmployeePage();
+            load.Show();
+            Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
