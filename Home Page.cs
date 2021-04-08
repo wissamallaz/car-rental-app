@@ -48,7 +48,9 @@ namespace Car_Rental_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            CarPage load = new CarPage();
+            load.Show();
+            Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

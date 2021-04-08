@@ -69,6 +69,11 @@ namespace Car_Rental_Application
                 MessageBox.Show("Something went wrong!");
             }
         }
+
+        private void Btn_Exit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

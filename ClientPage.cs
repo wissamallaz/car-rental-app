@@ -141,6 +141,13 @@ namespace Car_Rental_Application
             load.Show();
             Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CarPage load = new CarPage();
+            load.Show();
+            Hide();
+        }
     }
 }
         

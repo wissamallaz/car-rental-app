@@ -31,7 +31,6 @@ namespace Car_Rental_Application
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchClient));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btn_Exit = new System.Windows.Forms.Button();
             this.btn_back_client = new System.Windows.Forms.Button();
             this.ClientList = new System.Windows.Forms.ListBox();
             this.txt_s_email = new System.Windows.Forms.TextBox();
@@ -53,25 +52,11 @@ namespace Car_Rental_Application
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
             this.panel1.Controls.Add(this.btn_back_client);
-            this.panel1.Controls.Add(this.Btn_Exit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1740, 69);
             this.panel1.TabIndex = 2;
-            // 
-            // Btn_Exit
-            // 
-            this.Btn_Exit.BackColor = System.Drawing.Color.White;
-            this.Btn_Exit.FlatAppearance.BorderSize = 0;
-            this.Btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Exit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Exit.Image")));
-            this.Btn_Exit.Location = new System.Drawing.Point(1652, 0);
-            this.Btn_Exit.Name = "Btn_Exit";
-            this.Btn_Exit.Size = new System.Drawing.Size(88, 72);
-            this.Btn_Exit.TabIndex = 6;
-            this.Btn_Exit.UseVisualStyleBackColor = false;
             // 
             // btn_back_client
             // 
@@ -237,7 +222,7 @@ namespace Car_Rental_Application
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SearchClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.SearchClient_Load);
@@ -250,7 +235,6 @@ namespace Car_Rental_Application
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Btn_Exit;
         private System.Windows.Forms.Button btn_back_client;
         private System.Windows.Forms.ListBox ClientList;
         private System.Windows.Forms.TextBox txt_s_email;

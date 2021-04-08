@@ -101,6 +101,7 @@ namespace Car_Rental_Application
             this.button2.Size = new System.Drawing.Size(294, 72);
             this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
