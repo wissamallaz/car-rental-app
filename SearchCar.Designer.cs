@@ -52,9 +52,12 @@ namespace Car_Rental_Application
             // 
             // btn_back_car
             // 
-            this.btn_back_car.BackgroundImage = global::Car_Rental_Application.Properties.Resources.back_icon1;
+            this.btn_back_car.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_back_car.BackgroundImage")));
             this.btn_back_car.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_back_car.Location = new System.Drawing.Point(3, 3);
+            this.btn_back_car.FlatAppearance.BorderSize = 0;
+            this.btn_back_car.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back_car.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_back_car.Location = new System.Drawing.Point(12, 3);
             this.btn_back_car.Name = "btn_back_car";
             this.btn_back_car.Size = new System.Drawing.Size(110, 63);
             this.btn_back_car.TabIndex = 31;

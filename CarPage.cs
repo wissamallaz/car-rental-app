@@ -65,7 +65,7 @@ namespace Car_Rental_Application
                
 
                 
-                string query = "INSERT INTO Car VALUES (@Plate, @Branch, @Brand, @Color, @Engine, @YearModel, @Category, @Preview, @Availability, @Insurance)";
+                string query = "INSERT INTO Car VALUES (@Plate, @Branch, @Brand, @Color, @Engine, @YearModel, @Category, @Preview, @Insurance)";
                 SqlCommand com = new SqlCommand(query, con);
                 com.Parameters.AddWithValue("@Plate", txt_plate.Text);
                 com.Parameters.AddWithValue("@Branch", Int32.Parse(txt_branch.Text));
@@ -76,7 +76,6 @@ namespace Car_Rental_Application
                 com.Parameters.AddWithValue("@Rent_per_day", txt_rent_per_day.Text);
                 com.Parameters.AddWithValue("@Category", txt_category.Text);
                 com.Parameters.AddWithValue("@Preview", txt_yearmodel.Text);
-                com.Parameters.AddWithValue("@Availability", checkBox1.Checked);
                 com.Parameters.AddWithValue("@Insurance", checkBox2.Checked);
 
 
@@ -121,7 +120,7 @@ namespace Car_Rental_Application
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EmployeePage load = new EmployeePage();
+            ClientPage load = new ClientPage();
             load.Show();
             Hide();
         }
@@ -133,7 +132,7 @@ namespace Car_Rental_Application
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ClientPage load = new ClientPage();
+            EmployeePage load = new EmployeePage();
             load.Show();
             Hide();
         }
