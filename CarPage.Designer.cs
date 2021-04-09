@@ -55,7 +55,6 @@ namespace Car_Rental_Application
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btn_add_photo = new System.Windows.Forms.Button();
             this.txt_plate = new System.Windows.Forms.TextBox();
             this.txt_branch = new System.Windows.Forms.TextBox();
             this.txt_brand = new System.Windows.Forms.TextBox();
@@ -65,8 +64,12 @@ namespace Car_Rental_Application
             this.txt_rent_per_day = new System.Windows.Forms.TextBox();
             this.txt_category = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,7 +83,7 @@ namespace Car_Rental_Application
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1740, 69);
+            this.panel1.Size = new System.Drawing.Size(1370, 69);
             this.panel1.TabIndex = 1;
             // 
             // button3
@@ -338,7 +341,7 @@ namespace Car_Rental_Application
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(21, 501);
+            this.label10.Location = new System.Drawing.Point(581, 134);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 29);
             this.label10.TabIndex = 25;
@@ -367,21 +370,6 @@ namespace Car_Rental_Application
             this.label12.Size = new System.Drawing.Size(152, 29);
             this.label12.TabIndex = 27;
             this.label12.Text = "Rent_per_day";
-            // 
-            // btn_add_photo
-            // 
-            this.btn_add_photo.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add_photo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add_photo.BackgroundImage")));
-            this.btn_add_photo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_add_photo.FlatAppearance.BorderSize = 0;
-            this.btn_add_photo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add_photo.Location = new System.Drawing.Point(245, 474);
-            this.btn_add_photo.Name = "btn_add_photo";
-            this.btn_add_photo.Size = new System.Drawing.Size(102, 69);
-            this.btn_add_photo.TabIndex = 32;
-            this.btn_add_photo.Text = " ";
-            this.btn_add_photo.UseVisualStyleBackColor = false;
-            this.btn_add_photo.Click += new System.EventHandler(this.btn_add_photo_Click);
             // 
             // txt_plate
             // 
@@ -450,14 +438,35 @@ namespace Car_Rental_Application
             this.checkBox2.TabIndex = 42;
             this.checkBox2.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox.Location = new System.Drawing.Point(487, 174);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(306, 220);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 44;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
+            // 
             // CarPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1740, 870);
+            this.ClientSize = new System.Drawing.Size(1370, 772);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.txt_category);
             this.Controls.Add(this.txt_rent_per_day);
@@ -467,7 +476,6 @@ namespace Car_Rental_Application
             this.Controls.Add(this.txt_brand);
             this.Controls.Add(this.txt_branch);
             this.Controls.Add(this.txt_plate);
-            this.Controls.Add(this.btn_add_photo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -492,6 +500,8 @@ namespace Car_Rental_Application
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,7 +530,6 @@ namespace Car_Rental_Application
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btn_add_photo;
         private System.Windows.Forms.TextBox txt_plate;
         private System.Windows.Forms.TextBox txt_branch;
         private System.Windows.Forms.TextBox txt_brand;
@@ -530,5 +539,7 @@ namespace Car_Rental_Application
         private System.Windows.Forms.TextBox txt_rent_per_day;
         private System.Windows.Forms.TextBox txt_category;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }

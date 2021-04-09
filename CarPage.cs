@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
+using System.IO;
 
 namespace Car_Rental_Application
 {
@@ -55,49 +57,69 @@ namespace Car_Rental_Application
         {
 
         }
-
-
-        private void btn_addcar_Click(object sender, EventArgs e)
+        public void Insert(byte[] image)
         {
             try
             {
+                using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["CarRentalDbConString"].ConnectionString))
+            {
+                if (cn.State == ConnectionState.Closed)
+                    cn.Open();
 
-               
-
-                
-                string query = "INSERT INTO Car VALUES (@Plate, @Branch, @Brand, @Color, @Engine, @YearModel, @Category, @Preview, @Insurance)";
-                SqlCommand com = new SqlCommand(query, con);
-                com.Parameters.AddWithValue("@Plate", txt_plate.Text);
-                com.Parameters.AddWithValue("@Branch", Int32.Parse(txt_branch.Text));
-                com.Parameters.AddWithValue("@Brand", txt_brand.Text);
-                com.Parameters.AddWithValue("@Color", txt_color.Text);
-                com.Parameters.AddWithValue("@Engine", txt_engine.Text);
-                com.Parameters.AddWithValue("@YearModel", Int32.Parse(txt_yearmodel.Text));
-                com.Parameters.AddWithValue("@Rent_per_day", txt_rent_per_day.Text);
-                com.Parameters.AddWithValue("@Category", txt_category.Text);
-                com.Parameters.AddWithValue("@Preview", txt_yearmodel.Text);
-                com.Parameters.AddWithValue("@Insurance", checkBox2.Checked);
-
-
-
-
-                if (con.State != ConnectionState.Open)
-                    con.Open();
-                com.ExecuteNonQuery();
-
-                if (con.State != ConnectionState.Closed)
-                    con.Close();
-                MessageBox.Show("Car added successfully!");
-
-
+                using (SqlCommand com = new SqlCommand("INSERT INTO Car VALUES (@Plate, @Branch, @Brand, @Color, @Engine, @YearModel,@Rent_per_day, @Category, @Preview, @Insurance)", cn))
+                {
+                    com.Parameters.AddWithValue("@Plate", txt_plate.Text);
+                    com.Parameters.AddWithValue("@Branch", Int32.Parse(txt_branch.Text));
+                    com.Parameters.AddWithValue("@Brand", txt_brand.Text);
+                    com.Parameters.AddWithValue("@Color", txt_color.Text);
+                    com.Parameters.AddWithValue("@Engine", txt_engine.Text);
+                    com.Parameters.AddWithValue("@YearModel", Int32.Parse(txt_yearmodel.Text));
+                    com.Parameters.AddWithValue("@Rent_per_day", txt_rent_per_day.Text);
+                    com.Parameters.AddWithValue("@Category", txt_category.Text);
+                    com.Parameters.AddWithValue("@Preview", image);
+                    com.Parameters.AddWithValue("@Insurance", checkBox2.Checked);
+                    com.ExecuteNonQuery();
+                }
+            }
+            if (con.State != ConnectionState.Closed)
+                con.Close();
+            MessageBox.Show("Car added successfully!");
             }
             catch (Exception Msg)
             {
                 MessageBox.Show(Msg.Message);
             }
-        }
 
-       
+        }
+    
+
+    public byte[] ConvertImageToBytes(Image img)
+    {
+        using (MemoryStream ms = new MemoryStream())
+        {
+            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);  // You can change the image type from jpg to png or anything else from here
+            return ms.ToArray();
+
+        }
+    }
+    public Image ConvertByteArrayToImage(byte[] data)
+    {
+        using(MemoryStream ms=new MemoryStream(data))
+        {
+            return Image.FromStream(ms);
+        }
+    }
+
+    private void btn_addcar_Click(object sender, EventArgs e)
+    {
+            using (OpenFileDialog ofd = new OpenFileDialog() )
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox.Image = Image.FromFile(ofd.FileName);
+                    Insert(ConvertImageToBytes(pictureBox.Image));
+                }
+    }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -155,6 +177,11 @@ namespace Car_Rental_Application
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
         {
 
         }

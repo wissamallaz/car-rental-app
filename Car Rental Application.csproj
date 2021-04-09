@@ -78,6 +78,11 @@
     <Compile Include="CarPage.Designer.cs">
       <DependentUpon>CarPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarRentalDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarRentalDbDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmployeePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +162,17 @@
     </None>
     <None Include="CarRentalDbDataSet.xss">
       <DependentUpon>CarRentalDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDbDataSet1.xsc">
+      <DependentUpon>CarRentalDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarRentalDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarRentalDbDataSet1.xss">
+      <DependentUpon>CarRentalDbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
