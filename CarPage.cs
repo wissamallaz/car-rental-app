@@ -66,7 +66,7 @@ namespace Car_Rental_Application
                 if (cn.State == ConnectionState.Closed)
                     cn.Open();
 
-                using (SqlCommand com = new SqlCommand("INSERT INTO Car VALUES (@Plate, @Branch, @Brand, @Color, @Engine, @YearModel,@Rent_per_day, @Category, @Preview, @Insurance)", cn))
+                using (SqlCommand com = new SqlCommand("INSERT INTO Car VALUES (@Plate, @Branch, @Brand, @Color, @Engine, @YearModel,@Rent_per_day, @Category, @Preview, @Available, @Insurance)", cn))
                 {
                     com.Parameters.AddWithValue("@Plate", txt_plate.Text);
                     com.Parameters.AddWithValue("@Branch", Int32.Parse(txt_branch.Text));
@@ -77,6 +77,7 @@ namespace Car_Rental_Application
                     com.Parameters.AddWithValue("@Rent_per_day", txt_rent_per_day.Text);
                     com.Parameters.AddWithValue("@Category", txt_category.Text);
                     com.Parameters.AddWithValue("@Preview", image);
+                    com.Parameters.AddWithValue("@Available", checkBox1.Checked);
                     com.Parameters.AddWithValue("@Insurance", checkBox2.Checked);
                     com.ExecuteNonQuery();
                 }
