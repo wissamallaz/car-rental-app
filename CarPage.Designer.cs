@@ -31,9 +31,6 @@ namespace Car_Rental_Application
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarPage));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -48,7 +45,6 @@ namespace Car_Rental_Application
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_addcar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_showcars = new System.Windows.Forms.Button();
             this.btn_searchcars = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,13 +60,10 @@ namespace Car_Rental_Application
             this.txt_rent_per_day = new System.Windows.Forms.TextBox();
             this.txt_category = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +78,7 @@ namespace Car_Rental_Application
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 69);
+            this.panel1.Size = new System.Drawing.Size(1740, 69);
             this.panel1.TabIndex = 1;
             // 
             // button3
@@ -251,44 +244,6 @@ namespace Car_Rental_Application
             this.btn_addcar.UseVisualStyleBackColor = false;
             this.btn_addcar.Click += new System.EventHandler(this.btn_addcar_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(829, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Size = new System.Drawing.Size(899, 512);
-            this.dataGridView1.TabIndex = 20;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // btn_showcars
             // 
             this.btn_showcars.BackColor = System.Drawing.Color.Transparent;
@@ -298,7 +253,7 @@ namespace Car_Rental_Application
             this.btn_showcars.ForeColor = System.Drawing.Color.White;
             this.btn_showcars.Image = global::Car_Rental_Application.Properties.Resources.preview_cars;
             this.btn_showcars.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_showcars.Location = new System.Drawing.Point(1163, 692);
+            this.btn_showcars.Location = new System.Drawing.Point(1250, 720);
             this.btn_showcars.Name = "btn_showcars";
             this.btn_showcars.Size = new System.Drawing.Size(246, 94);
             this.btn_showcars.TabIndex = 21;
@@ -316,9 +271,9 @@ namespace Car_Rental_Application
             this.btn_searchcars.ForeColor = System.Drawing.Color.White;
             this.btn_searchcars.Image = global::Car_Rental_Application.Properties.Resources.search;
             this.btn_searchcars.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_searchcars.Location = new System.Drawing.Point(1187, 75);
+            this.btn_searchcars.Location = new System.Drawing.Point(965, 704);
             this.btn_searchcars.Name = "btn_searchcars";
-            this.btn_searchcars.Size = new System.Drawing.Size(222, 93);
+            this.btn_searchcars.Size = new System.Drawing.Size(240, 119);
             this.btn_searchcars.TabIndex = 22;
             this.btn_searchcars.Text = "Search Cars\r\n";
             this.btn_searchcars.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -343,7 +298,7 @@ namespace Car_Rental_Application
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(581, 134);
+            this.label10.Location = new System.Drawing.Point(857, 165);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 29);
             this.label10.TabIndex = 25;
@@ -440,20 +395,15 @@ namespace Car_Rental_Application
             this.checkBox2.TabIndex = 42;
             this.checkBox2.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox
             // 
+            this.pictureBox.BackColor = System.Drawing.Color.White;
+            this.pictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.BackgroundImage")));
+            this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox.Location = new System.Drawing.Point(487, 174);
+            this.pictureBox.Location = new System.Drawing.Point(737, 212);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(306, 220);
+            this.pictureBox.Size = new System.Drawing.Size(306, 223);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 44;
             this.pictureBox.TabStop = false;
@@ -487,12 +437,11 @@ namespace Car_Rental_Application
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 772);
+            this.ClientSize = new System.Drawing.Size(1740, 870);
             this.ControlBox = false;
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.txt_category);
             this.Controls.Add(this.txt_rent_per_day);
@@ -508,7 +457,6 @@ namespace Car_Rental_Application
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_searchcars);
             this.Controls.Add(this.btn_showcars);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_addcar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -525,8 +473,6 @@ namespace Car_Rental_Application
             this.Load += new System.EventHandler(this.EmployeePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -549,7 +495,6 @@ namespace Car_Rental_Application
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_addcar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_showcars;
         private System.Windows.Forms.Button btn_searchcars;
         private System.Windows.Forms.Label label8;
@@ -565,7 +510,6 @@ namespace Car_Rental_Application
         private System.Windows.Forms.TextBox txt_rent_per_day;
         private System.Windows.Forms.TextBox txt_category;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label9;

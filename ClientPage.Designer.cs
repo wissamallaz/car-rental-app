@@ -72,7 +72,7 @@ namespace Car_Rental_Application
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 69);
+            this.panel1.Size = new System.Drawing.Size(1740, 69);
             this.panel1.TabIndex = 1;
             // 
             // button3
@@ -355,7 +355,7 @@ namespace Car_Rental_Application
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 772);
+            this.ClientSize = new System.Drawing.Size(1740, 870);
             this.ControlBox = false;
             this.Controls.Add(this.btn_searchclients);
             this.Controls.Add(this.btn_showclients);

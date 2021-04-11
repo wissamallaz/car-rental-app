@@ -129,14 +129,11 @@ namespace Car_Rental_Application
 
         private void btn_showcars_Click(object sender, EventArgs e)
         {
-            string query = "Select * from Car";
-            DataTable td = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-            adapter.Fill(td);
-            dataGridView1.DataSource = td;
+            PreviewCar load = new PreviewCar();
+            load.Show();
+            Hide();
         }
-
-        private void btn_back_car_Click(object sender, EventArgs e)
+            private void btn_back_car_Click(object sender, EventArgs e)
         {
            
         }
@@ -186,6 +183,8 @@ namespace Car_Rental_Application
         {
 
         }
+
+       
     }
 }
         

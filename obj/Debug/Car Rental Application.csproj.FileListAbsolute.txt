@@ -85,3 +85,4 @@ C:\Users\Famille\Documents\RHU\RHU 3.2\web prog\car-rental-app\bin\Debug\CarRent
 C:\Users\Famille\Documents\RHU\RHU 3.2\web prog\car-rental-app\bin\Debug\Car Rental Application.exe.config
 C:\Users\Famille\Documents\RHU\RHU 3.2\web prog\car-rental-app\bin\Debug\Car Rental Application.exe
 C:\Users\Famille\Documents\RHU\RHU 3.2\web prog\car-rental-app\bin\Debug\Car Rental Application.pdb
+C:\Users\wissa\Desktop\car-rental-app-main\obj\Debug\Car_Rental_Application.PreviewCar.resources
